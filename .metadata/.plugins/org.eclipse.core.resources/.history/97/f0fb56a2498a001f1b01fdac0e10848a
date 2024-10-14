@@ -1,0 +1,6 @@
+server:
+  ssl:
+    key-alias: 
+		key-store:
+		key-store-type:
+		key-password:
