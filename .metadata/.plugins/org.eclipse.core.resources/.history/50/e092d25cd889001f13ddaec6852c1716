@@ -1,0 +1,15 @@
+package co.edu.uco.ucobet.generales.domain.city.exceptions;
+
+import co.edu.co.uco.generales.crosscutting.exceptions.RuleUcoBetException;
+
+public class CityIdFormatIsNotValidException extends RuleUcoBetException {
+	
+	private static final long serialVersionUID = 1L;
+	
+	private CityIdFormatIsNotValidException(String technicalMessage, String userMessage, Exception rootException) {
+		super(technicalMessage, userMessage, rootException);
+	}
+	
+	public static final CityIdFormatIsNotValidException create() {
+	}
+}

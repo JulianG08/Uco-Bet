@@ -1,0 +1,10 @@
+package co.edu.uco.ucobet.generales;
+
+
+class UcobetApplicationTests {
+
+	
+	void contextLoads() {
+	}
+
+}
