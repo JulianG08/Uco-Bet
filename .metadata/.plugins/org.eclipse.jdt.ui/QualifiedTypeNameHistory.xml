@@ -4,4 +4,6 @@
     <fullyQualifiedTypeName name="co.edu.uco.ucobet.generales.crosscutting.exceptions.RuleUcoBetException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="co.edu.uco.ucobet.generales.crosscutting.helpers.UUIDHelper"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 </qualifiedTypeNameHistroy>
