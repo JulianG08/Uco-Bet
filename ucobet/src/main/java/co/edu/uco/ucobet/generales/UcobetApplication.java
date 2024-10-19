@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@ComponentScan(basePackages = {"co.edu.uco.ucobet.generales"})
-@EnableJpaRepositories(basePackages = {"co.edu.uco.ucobet.generales.application.secondaryports.repository"})
+@ComponentScan(basePackages = {"co.edu.uco.ucobet.generales.application.primaryports.interactor.city"})
+@EnableJpaRepositories(basePackages = {"co.edu.uco.ucobet.generales.application.secondaryports.repository.CityRepositoryCustoms"})
 @EntityScan(basePackages = {"co.edu.uco.ucobet.generales.application.secondaryports.entity"})
 public class UcobetApplication {
 	
