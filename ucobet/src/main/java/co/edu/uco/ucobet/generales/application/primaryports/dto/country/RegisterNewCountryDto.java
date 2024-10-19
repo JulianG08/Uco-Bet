@@ -18,7 +18,7 @@ public final class RegisterNewCountryDto {
 		return name;
 	}
 	
-	public final void setName(final String name) {
+	private final void setName(final String name) {
 		this.name = TextHelper.getDefault(name, TextHelper.EMPTY);
 	}
 }

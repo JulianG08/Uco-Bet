@@ -5,3 +5,7 @@
 1729185392309	Move compilation unit
 1729185397349	Move compilation unit
 1729194621553	Rename type 'UpdateUseCase'
+1729225106543	Rename type 'InteractorWithOutReturn'
+1729226400810	Rename type 'CityRepositoryImpl'
+1729226454536	Move compilation unit
+1729269458921	Delete element

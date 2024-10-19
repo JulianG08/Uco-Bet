@@ -23,7 +23,7 @@ public final class RegisterNewStateDto {
 		return country;
 	}
 	
-	public final void setCountry(final UUID country) {
+	private final void setCountry(final UUID country) {
 		this.country = UUIDHelper.getDefault(country, UUIDHelper.getDefault());
 	}
 	
@@ -31,7 +31,7 @@ public final class RegisterNewStateDto {
 		return name;
 	}
 	
-	public final void setName(final String name) {
+	private final void setName(final String name) {
 		this.name = TextHelper.getDefault(name, TextHelper.EMPTY);
 	}
 }

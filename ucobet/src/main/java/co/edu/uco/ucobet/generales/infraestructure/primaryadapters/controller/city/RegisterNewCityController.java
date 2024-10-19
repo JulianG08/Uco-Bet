@@ -14,13 +14,13 @@ import co.edu.uco.ucobet.generales.crosscutting.helpers.UUIDHelper;
 @RequestMapping("/generales/api/v1/cities")
 public class RegisterNewCityController {
 	
-	private RegisterNewCityController registerNewCityInteractor;
+	private RegisterNewCityInteractor registerNewCityInteractor;
 	
 	public RegisterNewCityController(final RegisterNewCityInteractor registerNewCityInteractor) {
 		this.registerNewCityInteractor = registerNewCityInteractor;
 	}
 
-	//Mala practica
+	// Mala practica
 	@GetMapping
 	public RegisterNewCityDto getDummy() {
 		return RegisterNewCityDto.create("Rionegro", UUIDHelper.getDefault());
@@ -28,6 +28,7 @@ public class RegisterNewCityController {
 	
 	@PostMapping
 	public RegisterNewCityDto getDummy(@RequestBody RegisterNewCityDto data) {
-		return RegisterNewCityDto.create("Rionegro", UUIDHelper.getDefault());
+		registerNewCityInteractor.execute(data);
+		return data;
 	}
 }

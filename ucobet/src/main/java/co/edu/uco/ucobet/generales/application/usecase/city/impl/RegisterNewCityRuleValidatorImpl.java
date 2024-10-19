@@ -13,11 +13,11 @@ import co.edu.uco.ucobet.generales.domain.state.StateDomain;
 
 public class RegisterNewCityRuleValidatorImpl implements RegisterNewCityRuleValidator {
 	
-	CityIdDoesNotExistsRule cityIdDoesNotExistsRule;
-	CityIdFormatIsValidRule cityIdFormatIsValidRule;
-	CityIdIsNotEmptyRule cityIdIsNotEmptyRule;
-	CityNameIsUniqueForStateRule cityNameIsUniqueForStateRule;
-	CityStateIsValidRule cityStateIsValidRule;
+	private CityIdDoesNotExistsRule cityIdDoesNotExistsRule;
+	private CityIdFormatIsValidRule cityIdFormatIsValidRule;
+	private CityIdIsNotEmptyRule cityIdIsNotEmptyRule;
+	private CityNameIsUniqueForStateRule cityNameIsUniqueForStateRule;
+	private CityStateIsValidRule cityStateIsValidRule;
 	
 	public RegisterNewCityRuleValidatorImpl(final CityIdDoesNotExistsRule cityIdDoesNotExistsRule, final CityIdFormatIsValidRule cityIdFormatIsValidRule, final CityIdIsNotEmptyRule cityIdIsNotEmptyRule, final CityNameIsUniqueForStateRule cityNameIsUniqueForStateRule, final CityStateIsValidRule cityStateIsValidRule) {
 		this.cityIdDoesNotExistsRule = cityIdDoesNotExistsRule;
@@ -28,7 +28,7 @@ public class RegisterNewCityRuleValidatorImpl implements RegisterNewCityRuleVali
 	}
 	
 	@Override
-	public void validate(CityDomain data) {
+	public void validate(final CityDomain data) {
 		validateRulesRelatedWithId(data.getId());
 		validateRulesRelatedWithName(data);
 		validateRulesRelatedWithState(data.getState());
