@@ -1,0 +1,26 @@
+spring.application.name=ucobet
+
+# Configuración de conexión a SQL Server
+spring.datasource.url=jdbc:sqlserver://ucobet-server.database.windows.net:1433;database=ucobet-db;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+# Inyección de credenciales desde Vault
+spring.datasource.username=${vault:secret/data/sqlserver#username}
+spring.datasource.password=${vault:secret/data/sqlserver#password}
+
+# Configuración de Vault
+spring.cloud.vault.application-name=ucobet
+spring.cloud.vault.host=localhost
+spring.cloud.vault.port=8200
+spring.cloud.vault.scheme=http
+spring.cloud.vault.authentication=TOKEN
+spring.cloud.vault.token=00000000-0000-0000-0000-000000000000
+
+# Backend y contexto de Vault para los secretos de SQL Server
+spring.cloud.vault.generic.enabled=true
+spring.cloud.vault.generic.backend=secret
+spring.cloud.vault.generic.default-context=sqlserver
+
+# Habilita la gestión de base de datos en Vault
+spring.cloud.vault.database.enabled=true
+spring.cloud.vault.database.role=db-role  # Este rol debe estar configurado en Vault

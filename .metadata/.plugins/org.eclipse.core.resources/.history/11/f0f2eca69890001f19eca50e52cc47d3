@@ -1,0 +1,5 @@
+package co.edu.uco.ucobet.generales.infraestructure.configuration;
+
+public class VaultConfig {
+
+}

@@ -1,0 +1,24 @@
+package co.edu.uco.ucobet.generales.application.secondaryports.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+@Repository
+public class CityRepositoryImpl {
+
+    @Autowired
+    private DataSource dataSource;
+
+    public void saveCity(String cityName) {
+        try (Connection connection = dataSource.getConnection()) {
+            // Ejemplo de lógica para guardar una ciudad en la base de datos
+            System.out.println("Guardando ciudad: " + cityName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

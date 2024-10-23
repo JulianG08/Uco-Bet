@@ -1,0 +1,11 @@
+spring.application.name=ucobet
+spring.cloud.vault.uri=http://127.0.0.1:8200
+spring.cloud.vault.token=00000000-0000-0000-0000-000000000000
+spring.cloud.vault.kv.enabled=true
+spring.cloud.vault.kv.backend=secret
+spring.cloud.vault.kv.application-name=sqlserver
+
+spring.datasource.url=jdbc:sqlserver://ucobet-server.database.windows.net:1433;database=ucobet-db;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+spring.datasource.username=${username}
+spring.datasource.password=${password}
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver

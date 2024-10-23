@@ -1,0 +1,11 @@
+spring.application.name=ucobet
+spring.cloud.vault.uri=http://127.0.0.1:8200  # Dirección de Vault
+spring.cloud.vault.token=your-vault-token     # Token generado
+spring.cloud.vault.kv.enabled=true
+spring.cloud.vault.kv.backend=secret          # Nombre del backend de KV en Vault
+spring.cloud.vault.kv.application-name=sqlserver
+
+spring.datasource.url=jdbc:sqlserver://ucobet-server.database.windows.net:1433;database=ucobet-db;user=ucobetdbuser;password=uc0b3tdbus3r!;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+spring.datasource.user=${user}
+spring.datasource.password=${password}
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver

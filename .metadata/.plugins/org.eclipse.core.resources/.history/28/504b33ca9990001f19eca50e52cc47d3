@@ -1,0 +1,30 @@
+package co.edu.uco.ucobet.generales.infraestructure.configuration;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+
+import javax.sql.DataSource;
+
+@Configuration
+public class VaultConfig {
+
+    @Value("${username}")
+    private String username;
+
+    @Value("${password}")
+    private String password;
+
+    @Value("${spring.datasource.url}")
+    private String datasourceUrl;
+
+    @Bean
+    public DataSource dataSource() {
+        return DataSourceBuilder.create()
+                .url(datasourceUrl)
+                .username(username)
+                .password(password)
+                .build();
+    }
+}

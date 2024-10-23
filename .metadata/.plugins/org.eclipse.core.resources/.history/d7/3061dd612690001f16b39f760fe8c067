@@ -1,0 +1,7 @@
+spring.application.name=ucobet
+
+# Configuración de base de datos SQL Server
+spring.datasource.url=jdbc:sqlserver://ucobet-server.database.windows.net:1433;database=ucobet-db;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+
+# Configuración de Vault
+spring.cloud.vault.token=00000000-0000-0000-0000-000000000000

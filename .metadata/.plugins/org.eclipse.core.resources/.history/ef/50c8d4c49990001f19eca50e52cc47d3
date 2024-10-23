@@ -1,0 +1,17 @@
+package co.edu.uco.ucobet.generales.application.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import co.edu.uco.ucobet.generales.application.secondaryports.repository.CityRepositoryImpl;
+
+@Service
+public class CityService {
+
+    @Autowired
+    private CityRepositoryImpl cityRepository;
+
+    public void registerNewCity(String cityName) {
+        cityRepository.saveCity(cityName);
+    }
+}

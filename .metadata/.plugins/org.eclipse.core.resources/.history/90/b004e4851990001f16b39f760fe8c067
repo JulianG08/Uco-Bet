@@ -1,0 +1,26 @@
+{"properties": [
+  {
+    "name": "spring.cloud.vault.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.vault.uri'"
+  },
+  {
+    "name": "spring.cloud.vault.generic.backend",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.vault.generic.backend'"
+  }
+]} "description": "A description for 'spring.cloud.vault.uri'"
+  },
+  {
+    "name": "spring.cloud.vault.generic.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.vault.generic.enabled'"
+  }
+]} "description": "A description for 'spring.cloud.vault.uri'"
+  },
+  {
+    "name": "spring.cloud.vault.token",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.vault.token'"
+  }
+]}

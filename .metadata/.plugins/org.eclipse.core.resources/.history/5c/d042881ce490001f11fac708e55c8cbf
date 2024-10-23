@@ -1,0 +1,29 @@
+package co.edu.uco.ucobet.generales.application.primaryports.interactor.city.impl;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import co.edu.uco.ucobet.generales.application.primaryports.dto.city.RegisterNewCityDto;
+import co.edu.uco.ucobet.generales.application.primaryports.interactor.city.RegisterNewCityInteractor;
+import co.edu.uco.ucobet.generales.application.usecase.city.RegisterNewCity;
+import co.edu.uco.ucobet.generales.domain.city.CityDomain;
+
+@Configuration
+public class RegisterNewCityInteractorImpl implements RegisterNewCityInteractor {
+
+	private RegisterNewCity registerNewCityUseCase;
+	
+	@Bean
+	public RegisterNewCityInteractorImpl(final RegisterNewCity registerNewCityUseCase) {
+		this.registerNewCityUseCase = registerNewCityUseCase;
+	}
+	
+	@Override
+	public void execute(RegisterNewCityDto data) {
+		// Convert dto to domain
+		CityDomain domain = CityDomain.create(null, null, null);
+		
+		//Call use case
+		registerNewCityUseCase.execute(domain);
+	}
+}

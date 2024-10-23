@@ -1,0 +1,12 @@
+package co.edu.uco.ucobet.generales.application.primaryports.interactor.city;
+
+import co.edu.uco.ucobet.generales.application.primaryports.dto.city.RegisterNewCityDto;
+import co.edu.uco.ucobet.generales.application.primaryports.interactor.InteractorWithoutReturn;
+import jakarta.annotation.ManagedBean;
+import jakarta.transaction.Transactional;
+
+@ManagedBean
+@Transactional
+public interface RegisterNewCityInteractor extends InteractorWithoutReturn<RegisterNewCityDto> {
+
+}
